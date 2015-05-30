@@ -41,6 +41,53 @@
     NSLog(@"release after:\nretain string:%@\nassign string:%@", _retainStr, _assignStr);
 }
 
+- (void)retainRefrence
+{
+    // alloc/new/copy/mutableCopy生成的对象自己持有
+    // 自己持有对象
+    id obj1 = [[NSArray alloc] init];
+    
+    // 类似于下面array方法 返回的对象不被持有
+    id obj2 = [NSArray array];
+    [obj2 retain];
+
+    // 自己持有对象
+    id array1 = [self allocArray];
+    
+    // 自己不持有对象
+    id array2 = [self array];
+    // 调用retain 自己持有对象
+    [array2 retain];
+}
+
+- (NSArray *)allocArray
+{
+    NSArray *a = [[NSArray alloc] init];
+    
+    // 取得的对象自己持有对象
+    return a;
+}
+
+- (NSArray *)array
+{
+    NSArray *a = [[NSArray alloc] init];
+    
+    // 取得的对象存在，但自己不持有对象
+    // autorelease本质上就是调用NSAutoreleasePool对象的addObject方法
+    // 当调用drain时 pool会将array中的对象一次调用release方法
+    return [a autorelease];
+}
+
+- (void)autoreleaseRefrence
+{
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    
+    id obj = [[NSObject alloc] init];
+    [obj autorelease];
+    
+    [pool drain];
+}
+
 - (void)dealloc
 {
     [super dealloc];

@@ -1,5 +1,5 @@
 //
-//  helper.c
+//  Helper.c
 //  OCRuntime
 //
 //  Created by ronglei on 14-8-15.
@@ -8,8 +8,9 @@
 
 #include <stdio.h>
 #include <sys/time.h>
+#include <objc/runtime.h>
 #include <sys/_types/_timeval.h>
-#include "helper.h"
+#include "Helper.h"
 
 long long get_micro_time()
 {

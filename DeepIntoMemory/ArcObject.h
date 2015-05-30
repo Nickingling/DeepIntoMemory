@@ -19,10 +19,14 @@ typedef void (^Block) (void);
 @property (weak, nonatomic) NSString *weakStr;
 @property (copy, nonatomic) Block blk;
 
+
 // 不加任何属性声明的话会默认设置为
 // @property (readwrite, strong, atomic)NSString *noProperty;
 @property NSString *noProperty;
 
 - (void)outputString;
 
+- (void)weakRefrence;
+- (void)strongRefrence;
+- (void)autoreleaseRefrence;
 @end

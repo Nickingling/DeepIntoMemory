@@ -14,6 +14,9 @@
 		5D7725671AF8BC6400634F6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7725661AF8BC6400634F6E /* Images.xcassets */; };
 		5D77256A1AF8BC6400634F6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7725681AF8BC6400634F6E /* LaunchScreen.xib */; };
 		5D7725761AF8BC6400634F6E /* DeepIntoMemoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7725751AF8BC6400634F6E /* DeepIntoMemoryTests.m */; };
+		5D7725871AF8BC9700634F6E /* ArcObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7725811AF8BC9700634F6E /* ArcObject.m */; };
+		5D7725881AF8BC9700634F6E /* Helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D7725821AF8BC9700634F6E /* Helper.c */; };
+		5D7725891AF8BC9700634F6E /* MrcObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7725851AF8BC9700634F6E /* MrcObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 		5D77256F1AF8BC6400634F6E /* DeepIntoMemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepIntoMemoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7725741AF8BC6400634F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7725751AF8BC6400634F6E /* DeepIntoMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepIntoMemoryTests.m; sourceTree = "<group>"; };
+		5D77257F1AF8BC9700634F6E /* Arc principle.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Arc principle.md"; sourceTree = "<group>"; };
+		5D7725801AF8BC9700634F6E /* ArcObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcObject.h; sourceTree = "<group>"; };
+		5D7725811AF8BC9700634F6E /* ArcObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcObject.m; sourceTree = "<group>"; };
+		5D7725821AF8BC9700634F6E /* Helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Helper.c; sourceTree = "<group>"; };
+		5D7725831AF8BC9700634F6E /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		5D7725841AF8BC9700634F6E /* MrcObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MrcObject.h; sourceTree = "<group>"; };
+		5D7725851AF8BC9700634F6E /* MrcObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MrcObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +91,17 @@
 		5D7725581AF8BC6400634F6E /* DeepIntoMemory */ = {
 			isa = PBXGroup;
 			children = (
+				5D7725831AF8BC9700634F6E /* Helper.h */,
+				5D7725821AF8BC9700634F6E /* Helper.c */,
+				5D7725801AF8BC9700634F6E /* ArcObject.h */,
+				5D7725811AF8BC9700634F6E /* ArcObject.m */,
+				5D7725841AF8BC9700634F6E /* MrcObject.h */,
+				5D7725851AF8BC9700634F6E /* MrcObject.m */,
 				5D77255D1AF8BC6400634F6E /* AppDelegate.h */,
 				5D77255E1AF8BC6400634F6E /* AppDelegate.m */,
 				5D7725601AF8BC6400634F6E /* ViewController.h */,
 				5D7725611AF8BC6400634F6E /* ViewController.m */,
-				5D7725631AF8BC6400634F6E /* Main.storyboard */,
-				5D7725661AF8BC6400634F6E /* Images.xcassets */,
-				5D7725681AF8BC6400634F6E /* LaunchScreen.xib */,
+				5D77257F1AF8BC9700634F6E /* Arc principle.md */,
 				5D7725591AF8BC6400634F6E /* Supporting Files */,
 			);
 			path = DeepIntoMemory;
@@ -96,6 +110,9 @@
 		5D7725591AF8BC6400634F6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D7725631AF8BC6400634F6E /* Main.storyboard */,
+				5D7725661AF8BC6400634F6E /* Images.xcassets */,
+				5D7725681AF8BC6400634F6E /* LaunchScreen.xib */,
 				5D77255A1AF8BC6400634F6E /* Info.plist */,
 				5D77255B1AF8BC6400634F6E /* main.m */,
 			);
@@ -220,7 +237,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D7725621AF8BC6400634F6E /* ViewController.m in Sources */,
+				5D7725881AF8BC9700634F6E /* Helper.c in Sources */,
+				5D7725871AF8BC9700634F6E /* ArcObject.m in Sources */,
 				5D77255F1AF8BC6400634F6E /* AppDelegate.m in Sources */,
+				5D7725891AF8BC9700634F6E /* MrcObject.m in Sources */,
 				5D77255C1AF8BC6400634F6E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
